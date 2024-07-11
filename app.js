@@ -21,7 +21,10 @@ function main(ctime) {
     // console.log(ctime);
 }
 
-
+function isCollide(){
+    moveSound.pause();
+    gameOverSound.play();
+}
 
 // Display snake 
 board.innerHTML = "";
@@ -44,6 +47,10 @@ foodElement.style.gridColumnStart = food.x;
 foodElement.classList.add('food');
 board.appendChild(foodElement);
 
+
+if(snake_Arr[0].x===food.x&& snake_Arr[0].y===food.y){
+    
+}
 
 
 
