@@ -1,6 +1,6 @@
-let direction = { x: 0, y: 0 };
+let inputDir = { x: 0, y: 0 };
 const gameOverSound = new Audio('gameover.mp3');
-const moverSound = new Audio('move.mp3');
+const moveSound = new Audio('move.mp3');
 const foodSound = new Audio('food.mp3');
 const musicSound = new Audio('music.mp3');
 let board = document.querySelector('#board');
@@ -49,3 +49,50 @@ board.appendChild(foodElement);
 
 // Main Logic
 window.requestAnimationFrame(main);
+window.addEventListener('keydown',(e)=>{
+    let inputDir={x:0,y:0};
+    moveSound.play();
+    console.log(e.key);
+    switch (e.key) {
+        case 'ArrowUp':
+            inputDir.x=0;
+            inputDir.y=-1;
+            console.log('ArrowUp')
+            break;
+        case 'ArrowDown':
+            inputDir.x=0;
+            inputDir.y=1;
+            console.log('ArrowDown')
+            break;
+        case 'ArrowLeft':
+            inputDir.x=-1;
+            inputDir.y=0;
+            console.log('ArrowLeft')
+            break;
+        case 'ArrowRight':
+            inputDir.x=1;
+            inputDir.y=0;
+            console.log('ArrowRight')
+            break;
+        case 'w':
+            inputDir.x=0;
+            inputDir.y=-1;
+            console.log('w')
+            break;
+        case 's':
+            inputDir.x=0;
+            inputDir.y=1;
+            console.log('s')
+            break;
+        case 'a':
+            inputDir.x=-1;
+            inputDir.y=0;
+            console.log('a')
+            break;
+        case 'd':
+            inputDir.x=1;
+            inputDir.y=0;
+            console.log('d')
+            break;
+    }
+})
