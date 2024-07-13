@@ -22,12 +22,33 @@
     grid-template-columns: repeat(18, 1fr);
 }
 .head{
-    background-color: tomato;
+    background:linear-gradient(green,orange);
+    transform: scale(1.2);
+    border-radius: 8px;
 }
 .food{
     background-color: slateblue;
+    border-radius: 15px;
+    border: .25vmin solid black;
 }
 .big{
     background-color:limegreen;
+    border: .25vmin solid white;
+    border-radius: 10px;
+}
+#scorebox{
+    position: absolute;
+    top: 9px;
+    right: 200px;
+    font-size: 39px;
+    font-weight: bold;
+
+}
+#Hiscorebox{
+    position: absolute;
+    top: 60px;
+    right: 150px;
+    font-size: 39px;
+    font-weight: bold;
 
 }
